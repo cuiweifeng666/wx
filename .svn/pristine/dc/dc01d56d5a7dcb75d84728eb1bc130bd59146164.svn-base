@@ -1,0 +1,8 @@
+<!--pages/fc3dfilter/subpage/dmz.wxml-->
+<import src="../../common/roundnooption"/>
+<view>  
+
+   <template is="roundnooption" data="{{...y.item1}}" />   
+   <template is="roundnooption" data="{{...y.item2}}"/>  
+    <template is="roundnooption" data="{{...y.item3}}"/>   
+</view>

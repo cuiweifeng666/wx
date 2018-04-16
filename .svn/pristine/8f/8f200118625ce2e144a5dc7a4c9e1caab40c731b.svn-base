@@ -1,0 +1,38 @@
+<!--pages/fc3dfilter/space/space.wxml-->
+<!--pages/fc3dfilter/numb/numb.wxml-->
+<import src="../../common/roundnooption"/>
+
+
+<!-- boxAdd[0].content -->
+<view class='numberGroup'>
+      <view class='title'>{{group[0]}}</view>
+      <view class='num_code'>
+          <view wx:for="{{boxAdd[0].content}}"  data-s="{{index}}" class="num_detail" bindtap="changeNum" data-area="0">
+              {{item}}
+          </view>
+      </view>
+</view>
+<view class='numberGroup'>
+      <view class='title'>{{group[1]}}</view>
+      <view class='num_code'>
+          <view wx:for="{{boxAdd[1].content}}"  data-s="{{index}}" class="num_detail" bindtap="changeNum" data-area="1">
+              {{item}}
+          </view>
+      </view>
+</view>
+<view class='numberGroup'>
+      <view class='title'>{{group[2]}}</view>
+      <view class='num_code'>
+          <view wx:for="{{boxAdd[2].content}}"  data-s="{{index}}" class="num_detail" bindtap="changeNum" data-area="2">
+              {{item}}
+          </view>
+      </view>
+</view>
+<view class='pic_group'>
+    <image class='pic' src="{{url}}"></image>
+</view>
+  <!-- <template is="codeAll" />  -->
+<textarea class='text' disabled='true'></textarea>
+<template is="footer" data=""/>
+
+

@@ -1,0 +1,116 @@
+// pages/fc3dfilter/big/big.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    head: {
+      title: '直选奇偶',
+      headOff: 'true',
+      titleTrue: 'true',
+      headRightTitle: '直选奇偶走势图',
+    },
+    y: {
+      sel: {
+        area:'1',
+        head:'0数个数',
+        select: ['0个','1个','2个','3个'],
+        bord:true
+      },
+      sel1: {
+        area: '2',
+        head: '1数个数',
+        select: ['0个', '1个', '2个', '3个'],
+        bord: true
+      },
+      sel2: {
+        area: '3',
+        head: '2数个数',
+        select: ['0个', '1个', '2个', '3个'],
+        bord: true
+      },
+      sel3: {
+        area: '4',
+        head: '组选比例',
+        select: ['3:0:0', '2:1:0', '2:0:1', '1:2:0', '1:0:2', '1:1:1', '0:3:0', '0:2:1', '0:1:2', '0:0:3'],
+        bord: true
+      },
+      sel4: {
+        area: '5',
+        head: '直选分布',
+        select: ['000', '001', '002', '010', '011', '012', '020', '021', '022', '100', '101', '102', '110', '111', '112', '120', '121', '122', '200', '201', '202', '210', '211', '212', '220', '221', '222'],
+        bord: true
+      },
+   
+    }
+  },
+  chooseBtn: function (e) {
+      var that = this;
+      var sle = e.targe.dataset.ch;
+      var area = e.targe.dataset.area;
+      var dat = that.y['sel' +area].select.sle;
+      dat = !dat;
+      that.setData({
+        
+      })
+  },
+  allSelect: function (e) {
+
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

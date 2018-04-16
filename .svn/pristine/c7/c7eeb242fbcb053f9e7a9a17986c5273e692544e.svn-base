@@ -1,0 +1,103 @@
+// pages/fc3dfilter/big/big.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    head: {
+      title: '直选质合',
+      headOff: 'true',
+      titleTrue: 'true',
+      headRightTitle: '直选质合走势图',
+    },
+    y: {
+      sel: {
+        area:'1',
+        head:'质数个数',
+        select: [0,1,2,3],
+        bord:true
+      },
+      sel1: {
+        area: '2',
+        head: '组选比例',
+        select: ['3:0',"2:1",'1:2', '0:3'],
+        bord: true
+      },
+      sel2: {
+        area: '3',
+        head: '直选分布',
+        select: ['质质质', "质质合", '质合质', '质质合', '合质质', '合质合', '合合质','合合合'],
+        bord: false
+      },
+    }
+  },
+  chooseBtn: function (e) {
+      var that = this;
+      var sle = e.targe.dataset.ch;
+      var area = e.targe.dataset.area;
+      var dat = that.y['sel' +area].select.sle;
+      dat = !dat;
+      that.setData({
+        
+      })
+  },
+  allSelect: function (e) {
+
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

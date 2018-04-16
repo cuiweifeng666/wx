@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cqssc/cqssc",
+    "pages/logs/logs",
+    "pages/filtertool/filtertool",
+    "pages/fc3dfilter/fc3dfilter",
+    "pages/ssqfilter/ssqfilter",
+    "pages/dltfilter/dltfilter",
+    "pages/qefilter/qefilter",
+    "pages/qsfilter/qsfilter",
+    "pages/rwfilter/rwfilter",
+    "pages/fc3dfilter/subpage/dmz",
+    "pages/position/position",
+    "pages/fc3dfilter/position/position",
+    "pages/fc3dfilter/numb/numb",
+    "pages/fc3dfilter/space/space",
+    "pages/fc3dfilter/span/span",
+    "pages/fc3dfilter/even/even",
+    "pages/fc3dfilter/group/group"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#da3231",
+    "navigationBarTitleText": "彩经网过滤工具",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000000",
+    "borderStyle": "black",
+    "selectedColor": "#da3231",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/filtertool/filtertool",
+        "text": "过滤工具"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

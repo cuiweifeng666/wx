@@ -1,0 +1,8 @@
+<!--pages/fc3dfilter/big/big.wxml-->
+<import src="../../common/roundnooption"/>
+<template is="head"  data="{{...head}}" />
+<template is="scale"  data="{{...y.sel}}" />
+<template is="scale"  data="{{...y.sel1}}" />
+<template is="scale"  data="{{...y.sel2}}" />
+<template is="btnSel"   />
+<template is="footer"   />

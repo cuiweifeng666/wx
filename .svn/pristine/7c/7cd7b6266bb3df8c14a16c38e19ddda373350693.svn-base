@@ -1,0 +1,30 @@
+<!--pages/common/roundnooption.wxml-->
+<view class="number_box">  
+    <!--头部-->
+    <view id= "head" class="number_box_h1 clearfix">
+         <span></span>
+         <text>{{item.title}}胆码组1</text>
+         <navigator url="{{item.tourl}}" hover-class="navigator-hover">
+           <text>{{item.linktitle}}号码分布走势图</text>      
+         </navigator>
+    </view>
+    <!--号码部-->
+    <view id= "context" class="number_box_context">
+        <view wx:for="{{[0,1,2,3,4,5,6,7,8,9]}}" wx:for-item="i" wx:for-index="u">
+                    <view bindtap="selectNo" data-t="{{y}}" data-y="{{u}}" class="{{numArr[y][i] == true ? 'number_choose_item_red' : ''}}">{{u}}</view>                
+                </view>
+    </view>
+    <!--按钮部-->
+    <view id= "option" class="number_box_control">
+         <button type="default" hover-class="none" bindtap="setSelected">全选</button>
+         <button type="default" hover-class="none" bindtap="setClear">清除</button>
+    </view>
+    <!--尾部-->
+    <view id= "footer" class="number_box_footer">
+          <text>{{item.footertext}}出现：</text>
+          <view wx:for="{{[0,1,2,3]}}" wx:for-item="i" wx:for-index="u">
+                    <view bindtap="selectNo" class="{{numArr[y][i] == true ? 'number_choose_item_red' : ''}}">{{u}}</view>
+                </view>
+    </view>       
+</view>  
+

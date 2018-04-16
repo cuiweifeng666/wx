@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cqssc/cqssc",
+    "pages/logs/logs",
+    "pages/filtertool/filtertool",
+    "pages/fc3dfilter/fc3dfilter",
+    "pages/ssqfilter/ssqfilter",
+    "pages/dltfilter/dltfilter",
+    "pages/qefilter/qefilter",
+    "pages/qsfilter/qsfilter",
+    "pages/rwfilter/rwfilter",
+    "pages/position/position",
+    "pages/handred/handred"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#da3231",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000000",
+    "borderStyle": "black",
+    "selectedColor": "#da3231",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cqssc/cqssc",
+        "text": "重庆时时彩"
+      },
+      {
+        "pagePath": "pages/filtertool/filtertool",
+        "text": "过滤工具"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

@@ -1,0 +1,11 @@
+<!--pages/filtertool/filtertool.wxml-->
+<view class='gv_list'>
+<block wx:for="{{list.data}}" wx:key="{{list.data}}">
+  <navigator url="{{item.tourl}}" hover-class="navigator-hover" class="gv_list_item">
+      <image src="{{item.imgurl}}" class="gv_list_img"></image>
+      <view class="right">
+      <text class="gv_list_title">{{item.title}}</text>
+      </view>
+  </navigator>
+</block>
+</view>

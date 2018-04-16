@@ -1,0 +1,151 @@
+/**index.wxss**/
+page {
+  background:#fff;
+}
+button::after{
+border: none;
+padding: none;
+outline: none;
+margin: none;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 150px;
+}
+.tools{
+  position:fixed;
+  width:100%;
+  text-align: center;
+  bottom: 0;
+  z-index: 2;
+}
+.tools .name{
+  display:inline-block;
+  width:318rpx;
+  background:#FF5B69;
+  height:95rpx;
+  line-height: 100rpx;
+  border-radius:95rpx;
+  text-align: center;
+  line-height:95rpx;
+  color:#fff;
+  
+}
+ .tools  .detail  {
+    display:block;
+  padding: 0 60rpx;
+  margin-bottom:20rpx;
+  background:none;
+  height:95rpx;
+  font-size:32rpx;
+  border-radius:95rpx;
+  text-align: center;
+  line-height:42rpx;
+  color:#9B9B9B;
+ }
+.tools  .over {
+  background:#ffa;
+  color:#fff;
+}
+.text_group {
+  margin:60rpx;
+  margin-top:100rpx;
+  background:none;
+  height:130rpx;
+  color:#fff;
+  font-size: 30rpx;
+  border-radius:6rpx;
+  opacity:1;
+  display: flex;
+  justify-content:space-around;
+  flex-flow:nowrap row;
+}
+.text_group navigator, .text_group .non{
+  display:block;
+  color:#fff;
+  border: none;
+  font-size: 30rpx;
+  background:none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+.text_group navigator image, .text_group .non image{
+  display:block;
+  height:100rpx;
+  width:100rpx;
+  border-radius: 50%;
+  background:#fff;
+  line-height:100rpx;
+  color:#000;
+  margin:0;
+  padding:none;
+  border: none;
+  outline: none;
+}
+.text_group navigator text{
+  display:block;
+  height:100rpx;
+  width:100rpx;
+  line-height:76rpx;
+
+}
+
+.text_group view {
+  display:block;
+  background:none;
+  height:100rpx;
+  line-height:100rpx;
+  color:#000;
+}
+.gray {
+   opacity:.5;
+}
+.bottom {
+  position: absolute;
+  bottom:0;
+  width:100%;
+  height:240rpx;
+}
+.cs_button{
+
+}
+.clearNotice {
+  position: fixed;
+  top: 0rpx;
+  left:0;
+  width: 147rpx;
+  height: 147rpx;
+}
+.title_pic {
+  display:block;
+   position: fixed;
+   top:60rpx;
+  margin-left: 180rpx;
+  width: 389rpx;
+  height: 60rpx;
+}
+.center_pic  {
+  display:block;
+   position: fixed;
+   top:140rpx;
+  margin-left: 10rpx;
+  width: 750rpx;
+  height: 533rpx;
+}

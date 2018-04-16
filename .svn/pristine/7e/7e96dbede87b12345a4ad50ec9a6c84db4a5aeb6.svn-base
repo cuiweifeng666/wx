@@ -1,0 +1,25 @@
+/* pages/filtertool/filtertool.wxss */
+/*过滤工具列表*/
+.gv_list{
+	padding-left:.2rem;
+	background:#fff;
+}
+.gv_list_item{
+	display:-webkit-box;
+	display:-moz-box;
+	border-bottom:1px solid #e6e6e6;
+	background:url(../../web/images/yc_icon2.png) no-repeat 95% center;
+	padding:.2rem 0;
+	-webkit-box-align:center;
+}
+.gv_list_img{
+  margin-right:.5rem;
+    display:block;  
+    width:45px;
+    height:45px;
+}
+.gv_list_title{
+	font-size:1rem;
+	color:#4d4d4d;
+	font-weight:bold;
+}

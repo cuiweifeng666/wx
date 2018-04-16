@@ -1,0 +1,136 @@
+// pages/common/roundnooption.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+  
+  },
+
+  /*
+  *
+  */
+  pageInit: function()
+  {
+    var groupSelect = [];
+    for (var t = 0; t < 10; t++) {
+      groupSelect[t] = true;
+    }
+    var numArr = [];
+    for (var i = 0; i < 1; i++) {
+      var arr = [];
+      for (var j = 0; j < 10; j++) {
+        arr[j] = true;
+      }
+      numArr.push(arr);
+    }
+    that.setData({
+      numArr: numArr,
+      groupSelect: groupSelect
+    })
+  },
+  /**
+   * 全选button点击事件监听
+   */
+  setSelected: function (e) {
+    var that = this;   
+    var numArr = [];
+    for (var i = 0; i < 3; i++) {
+      var arr = [];
+      for (var j = 0; j < 10; j++) {
+        arr[j] = true;
+      }
+      numArr.push(arr);
+    }
+    that.setData({
+      numArr: numArr
+    })
+  },
+  
+  /**
+  * 清除button点击事件监听
+  */
+  setClear: function (e) {
+    var that = this;   
+    var numArr = [];
+    for (var i = 0; i < 3; i++) {
+      var arr = [];
+      for (var j = 0; j < 10; j++) {
+        arr[j] = false;
+      }
+      numArr.push(arr);
+    }
+    that.setData({
+      numArr: numArr
+    })
+  }, 
+
+  /**
+  * 号码点击事件监听
+  */
+  selectNo: function (e) {
+    var that = this;
+    var s = that.data.numArr
+    var m = e.target.dataset;
+    var y = e.target.dataset.t;
+    var t = e.target.dataset.y;
+    s[y][t] = !s[y][t];
+    that.setData({ numArr: s });
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    pageInit();
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

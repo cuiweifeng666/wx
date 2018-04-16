@@ -1,0 +1,7 @@
+<!--pages/fc3dfilter/even/even.wxml-->
+<import src="../../common/roundnooption"/>
+<view class='numberALL'>
+      <template is="ji" data="{{...boxAdd}}"/>
+      <template is="codeAll" /> 
+</view>
+<template is="footer" data=""/>

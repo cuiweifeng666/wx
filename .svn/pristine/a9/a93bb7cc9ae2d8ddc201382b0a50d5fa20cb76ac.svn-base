@@ -1,0 +1,112 @@
+// pages/filtertool/filtertool.js
+var list;
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    list:{
+      "data":[
+           {
+             id:"01",
+             imgurl: "../../web/images/gv_icon1.png",
+             tourl: "../fc3dfilter/fc3dfilter?type=3d",
+             title: "3D号码过滤"
+           },
+           {
+             id: "02",
+             imgurl: "../../web/images/gv_icon2.png",
+             tourl: "https://tools.m.cjcp.com.cn/#&pages/fc3dfilter.html",
+             title: "排三号码过滤"
+           },
+           {
+             id: "03",
+             imgurl: "../../web/images/gv_icon3.png",
+             tourl: "../ssqfilter/ssqfilter",
+             title: "双色球号码过滤"
+           },
+           {
+             id: "04",
+             imgurl: "../../web/images/gv_icon4.png",
+             tourl: "../dltfilter/dltfilter",
+             title: "大乐透号码过滤"
+           },
+           {
+             id: "05",
+             imgurl: "../../web/images/gv_icon5.png",
+             tourl: "../qefilter/qefilter",
+             title: "11选5前二号码过滤"
+           },
+           {
+             id: "06",
+             imgurl: "../../web/images/gv_icon5.png",
+             tourl: "../qsfilter/qsfilter",
+             title: "11选5前三号码过滤"
+           },
+           {
+             id: "07",
+             imgurl: "../../web/images/gv_icon5.png",
+             tourl: "../rwfilter/rwfilter",
+             title: "11选5任五号码过滤"
+           }
+      ]
+    }  
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+      this.setData({list:list})
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

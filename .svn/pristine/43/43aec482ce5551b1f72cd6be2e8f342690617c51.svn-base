@@ -1,0 +1,153 @@
+// pages/fc3dfilter/subpage/dmz.js
+var selectedList;
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    title: "胆码组1",
+    headRightTitle: "号码分布走势图",
+    headLinkUrl: "",
+    headRightDisplay: true,
+    footerDisplay: true,
+    selectedList: []
+  },
+  
+  /*
+ *  页面初始化的处理
+ */
+  pageInit: function () {
+    var that = this;
+    console.log(2)
+    var selectContextList = [];
+    var selectFootList = [];
+    //获取选定的号码    
+    //if (selectedList.length > 0) {
+    //  selectContextList = selectedList;
+    //} else {
+      //初始化
+      for (var t = 0; t < 10; t++) {
+        selectContextList[t] = true;
+      }
+    //}
+    //获取尾部选定的号码
+    //if (selectedList.length > 0) {
+    //  selectFootList = selectedList;
+    //} else {
+      //初始化
+      for (var t = 0; t < 4; t++) {
+        selectFootList[t] = true;
+      }
+    //}
+    //传入到页面
+    that.setData({selectContextList: selectContextList,
+    selectFootList: selectFootList})
+  },
+  /**
+   * 全选button点击事件监听
+   */
+  setSelected: function (e) {
+    var that = this;    
+    var dataList = that.data.selectContextList;
+    for (var t = 0; t < 10; t++) {
+      dataList[t] = true;
+    }    
+    that.setData({
+      selectContextList: dataList
+    })
+  },
+
+  /**
+  * 清除button点击事件监听
+  */
+  setClear: function (e) {
+    var that = this;
+    var dataList = that.data.selectContextList;
+    for (var i = 0; i < 10; i++) {
+      dataList[i] = false;
+    }
+    that.setData({
+      selectContextList: dataList
+    })
+  },
+
+  /**
+  * 号码点击事件监听
+  */
+  selectNo: function (e) {
+    var that = this;
+    var s = that.data.selectContextList    
+    var t = e.target.dataset.t;
+    s[t] = !s[t];
+    that.setData({ selectContextList: s });
+  },
+  /**
+  * 【出现】号码点击事件监听
+  */
+  selectFootNo: function (e) {
+    var that = this;
+    var s = that.data.selectFootList
+    var t = e.target.dataset.t;
+    s[t] = !s[t];
+    that.setData({ selectFootList: s });
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.pageInit();
+    console.log(2)
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

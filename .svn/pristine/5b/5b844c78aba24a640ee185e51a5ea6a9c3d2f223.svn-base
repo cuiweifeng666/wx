@@ -1,0 +1,142 @@
+<!--pages/fc3dfilter/fc3dfilter.wxml-->
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" 
+    data-current="0" bindtap="swichNav">直选</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" 
+    data-current="1" bindtap="swichNav">组选</view>      
+</view>  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <!-- 直选 -->  
+    <swiper-item>  
+      <!--号码区域-->
+      <view class='number_choose_bd'>
+         <!--<view class='number_choose_item'> class='number_choose_item_sub' class='number_choose_item_span'-->
+         <block wx:for="{{['百','十','个']}}" wx:for-item="j"  class='number_choose_list'  wx:for-index="y">
+             <view class='number_choose_item'>
+                <span>{{j}}:</span>
+                <view wx:for="{{[0,1,2,3,4,5,6,7,8,9]}}" wx:for-item="i" wx:for-index="u">
+                    <view bindtap="selectCir" data-t="{{y}}" data-y="{{u}}"  class="{{numArr[y][i] == true ? 'number_choose_item_red' : ''}}">{{u}}</view>
+                </view>
+              </view>
+         </block>
+         <view class='number_choose_button'>
+            <view class='number_choose_button_item'>
+                <image src="../../web/images/icon01_03.png"></image>
+                <view bindtap='allSelect'>全选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../web/images/icon02_05.png"></image>
+                <view bindtap='notSelect'>反选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../web/images/icon03_07.png"></image>
+                <view bindtap='clearSelect'>清除</view>
+            </view>
+         </view>
+        </view>
+        <!--过滤条件-->  
+        <view class="content_filter">
+             <view class='content_filter_h1'>
+             <view class='content_filter_h1_suff'></view>
+             过滤条件</view>
+             <view>
+                <block wx:for="{{filterlist.data}}" wx:key="{{filterlist.data}}">
+                  <view class="content_filter_li">
+                    <block wx:for="{{item.element}}" wx:for-item="element">
+                      <navigator id="{{element.id}}" url="{{element.tourl}}" hover-class="navigator-hover" class='content_filter_li_item'>
+                          {{element.title}}
+                      </navigator>
+                    </block>
+                  </view>
+                </block>
+             </view>
+        </view>
+        <!--过滤结果-->
+        <view class='filter_result'>
+            <view class='filter_result_h1'>
+                <view class='filter_result_h1_suff'></view>
+                过滤结果
+                <view class='filter_result_h1_suff2'>
+                  共：
+                  <view id="sd_zhu" class='filter_result_h1_suff2_first'>0</view>
+                  注，
+                  <view id="sd_money" class='filter_result_h1_suff2_last'>0</view>
+                  元
+                </view>
+             </view>
+             <view class='filter_result_context'>                 
+                 <textarea id="fc3d_result" cols="31" style="border:none;background: #fff;height:90%;overflow: scroll;width:100%" readonly="readonly"></textarea>                
+             </view>
+        </view>
+        
+    </swiper-item>  
+    <!-- 组选 -->  
+    <swiper-item>  
+      <!--号码选择-->
+      <view class='number_choose_bd'>
+        <view class='number_choose_item'>                
+           <view wx:for="{{[0,1,2,3,4,5,6,7,8,9]}}" wx:for-item="i" wx:for-index="s" >
+              <view class="number_choose_item_sub{{groupSelect[i]==true?' number_choose_item_red':''}}" bindtap="clickGroup" data-group="{{i}}"> {{i}} </view>
+          </view>    
+        </view>        
+        <view class='number_choose_li'>
+             <view class="number_choose_li_item">组三</view>
+             <view class='number_choose_li_item'>组六</view>
+        </view>
+         <view class='number_choose_button'>
+            <view class='number_choose_button_item'>
+                <image src="../../web/images/icon01_03.png" class='number_choose_button_item_image'></image>
+                <view class="number_choose_button_item_text" bindtap="groupSel">全选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../web/images/icon02_05.png" class='number_choose_button_item_image'></image>
+                <view class="number_choose_button_item_text" bindtap='notGroup' >反选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../web/images/icon03_07.png" class='number_choose_button_item_image'></image>
+                <view class="number_choose_button_item_text" bindtap='clearGroup'>清除</view>
+            </view>
+         </view>
+        </view> 
+        <!--过滤工具组选-->
+        <view class="content_filter">
+             <view class='content_filter_h1'>
+             <view class='content_filter_h1_suff'></view>
+             过滤条件</view>
+             <view>
+                <block wx:for="{{zxfilterlist.data}}" wx:key="{{zxfilterlist.data}}">
+                  <view class="content_filter_li">
+                    <block wx:for="{{item.element}}" wx:for-item="element">
+                      <navigator id="{{element.id}}" url="{{element.tourl}}" hover-class="navigator-hover" class='content_filter_li_item'>
+                          {{element.title}}
+                      </navigator>
+                    </block>
+                  </view>
+                </block>
+             </view>
+        </view>
+        <!--过滤结果-->
+        <view class='filter_result'>
+            <view class='filter_result_h1'>
+                <view class='filter_result_h1_suff'></view>
+                过滤结果
+                <view class='filter_result_h1_suff2'>
+                  共：
+                  <view id="sd_zhu" class='filter_result_h1_suff2_first'>0</view>
+                  注，
+                  <view id="sd_money" class='filter_result_h1_suff2_last'>0</view>
+                  元
+                </view>
+             </view>
+             <view class='filter_result_context'>                 
+                 <textarea id="fc3d_result" cols="31" style="border:none;background: #fff;height:90%;overflow: scroll;width:100%" readonly="readonly"></textarea>                
+             </view>
+        </view>
+    </swiper-item>      
+</swiper> 
+<view class='filter_btn'>
+            <button type="defaule" bindtap="copyNum" class='filter_btn_item'>复制号码</button>
+            <button type="defaule" bindtap="deleteCookie" class='filter_btn_item'>清空条件</button>
+            <button type="defaule" bindtap="getDatasoure" class='filter_btn_item'>点击过滤</button>
+            <button type="defaule" bindtap="getDatasoure" class='filter_btn_item'>机选20注</button>
+</view> 
